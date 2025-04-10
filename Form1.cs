@@ -12,7 +12,7 @@ using Microsoft.VisualBasic;
 
 namespace Sistema_Agencia_de_Viajes
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
@@ -111,8 +111,8 @@ namespace Sistema_Agencia_de_Viajes
             //    string password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su contraseña:", "Acceso a Reservas", "");
 
             //    if (password == "1234")
-                //{
-                    AbrirFormEnPanel(new Reservas());
+            //{
+            AbrirFormEnPanel(new Reservas());
             //    }
             //    else
             //    {
@@ -126,7 +126,7 @@ namespace Sistema_Agencia_de_Viajes
         }
 
         private void btnDestinos_Click(object sender, EventArgs e)
-        {            
+        {
             //string usuario = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su usuario:", "Acceso a Destinos", "");
 
             //if (usuario == "Lyn")
@@ -135,7 +135,7 @@ namespace Sistema_Agencia_de_Viajes
 
             //    if (password == "1234")
             //    {
-                    AbrirFormEnPanel(new Destinos());
+            AbrirFormEnPanel(new Destinos());
             //    }
             //    else
             //    {
@@ -149,7 +149,7 @@ namespace Sistema_Agencia_de_Viajes
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
-        {            
+        {
             //string usuario = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su usuario:", "Acceso a Empleados", "");
 
             //if (usuario == "Lyn")
@@ -158,17 +158,18 @@ namespace Sistema_Agencia_de_Viajes
 
             //    if (password == "1234")
             //    {
-                    AbrirFormEnPanel(new Empleados());
-    //            }
-    //            else
-    //            {
-    //                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    //            }
-    //        }
-    //        else
-    //        {
-    //            MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    //        }
-    //    }
-    //}
+            AbrirFormEnPanel(new Empleados());
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+        }
+    }
 }
