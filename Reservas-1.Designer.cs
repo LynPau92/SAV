@@ -28,335 +28,210 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservas_1));
-            panelContenedor = new System.Windows.Forms.Panel();
-            Reservas = new System.Windows.Forms.GroupBox();
-            cmbtipoViaje = new System.Windows.Forms.ComboBox();
-            txtcantidadPersonas = new System.Windows.Forms.TextBox();
-            label2 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
-            txtcorreo = new System.Windows.Forms.TextBox();
-            btnagregar = new System.Windows.Forms.Button();
-            label12 = new System.Windows.Forms.Label();
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            label11 = new System.Windows.Forms.Label();
-            txttelefono = new System.Windows.Forms.TextBox();
-            label5 = new System.Windows.Forms.Label();
-            txtpais = new System.Windows.Forms.TextBox();
-            button1 = new System.Windows.Forms.Button();
-            cmbDestino = new System.Windows.Forms.ComboBox();
-            dataGridView1 = new System.Windows.Forms.DataGridView();
-            label7 = new System.Windows.Forms.Label();
-            txtnombre = new System.Windows.Forms.TextBox();
-            label8 = new System.Windows.Forms.Label();
-            label9 = new System.Windows.Forms.Label();
-            panelContenedor.SuspendLayout();
-            Reservas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtCostoTotal = new System.Windows.Forms.TextBox();
+            this.cmbDestino = new System.Windows.Forms.ComboBox();
+            this.dtFDS = new System.Windows.Forms.DateTimePicker();
+            this.dtFDR = new System.Windows.Forms.DateTimePicker();
+            this.cmbCDP = new System.Windows.Forms.ComboBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.panelContenedor.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panelContenedor
             // 
-            panelContenedor.BackColor = System.Drawing.Color.White;
-            panelContenedor.BackgroundImage = (System.Drawing.Image)resources.GetObject("panelContenedor.BackgroundImage");
-            panelContenedor.Controls.Add(Reservas);
-            panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            panelContenedor.Location = new System.Drawing.Point(0, 0);
-            panelContenedor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new System.Drawing.Size(933, 519);
-            panelContenedor.TabIndex = 73;
+            this.panelContenedor.BackColor = System.Drawing.Color.White;
+            this.panelContenedor.Controls.Add(this.groupBox1);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(800, 450);
+            this.panelContenedor.TabIndex = 73;
             // 
-            // Reservas
+            // groupBox1
             // 
-            Reservas.Controls.Add(cmbtipoViaje);
-            Reservas.Controls.Add(txtcantidadPersonas);
-            Reservas.Controls.Add(label2);
-            Reservas.Controls.Add(label1);
-            Reservas.Controls.Add(txtcorreo);
-            Reservas.Controls.Add(btnagregar);
-            Reservas.Controls.Add(label12);
-            Reservas.Controls.Add(dateTimePicker1);
-            Reservas.Controls.Add(label11);
-            Reservas.Controls.Add(txttelefono);
-            Reservas.Controls.Add(label5);
-            Reservas.Controls.Add(txtpais);
-            Reservas.Controls.Add(button1);
-            Reservas.Controls.Add(cmbDestino);
-            Reservas.Controls.Add(dataGridView1);
-            Reservas.Controls.Add(label7);
-            Reservas.Controls.Add(txtnombre);
-            Reservas.Controls.Add(label8);
-            Reservas.Controls.Add(label9);
-            Reservas.Location = new System.Drawing.Point(46, 21);
-            Reservas.Name = "Reservas";
-            Reservas.Size = new System.Drawing.Size(670, 472);
-            Reservas.TabIndex = 0;
-            Reservas.TabStop = false;
-            Reservas.Text = "Reservas";
-            // 
-            // cmbtipoViaje
-            // 
-            cmbtipoViaje.Anchor = System.Windows.Forms.AnchorStyles.None;
-            cmbtipoViaje.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
-            cmbtipoViaje.FormattingEnabled = true;
-            cmbtipoViaje.Items.AddRange(new object[] { "Grupo", "Privado (+3 personas)" });
-            cmbtipoViaje.Location = new System.Drawing.Point(103, 140);
-            cmbtipoViaje.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            cmbtipoViaje.Name = "cmbtipoViaje";
-            cmbtipoViaje.Size = new System.Drawing.Size(228, 23);
-            cmbtipoViaje.TabIndex = 110;
-            cmbtipoViaje.Text = "Seleccione el tipo de viaje";
-            // 
-            // txtcantidadPersonas
-            // 
-            txtcantidadPersonas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            txtcantidadPersonas.Location = new System.Drawing.Point(537, 142);
-            txtcantidadPersonas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            txtcantidadPersonas.Name = "txtcantidadPersonas";
-            txtcantidadPersonas.Size = new System.Drawing.Size(123, 23);
-            txtcantidadPersonas.TabIndex = 109;
-            // 
-            // label2
-            // 
-            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.ForeColor = System.Drawing.Color.Teal;
-            label2.Location = new System.Drawing.Point(23, 142);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(37, 16);
-            label2.TabIndex = 104;
-            label2.Text = "Tipo";
+            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.cmbCDP);
+            this.groupBox1.Controls.Add(this.dtFDR);
+            this.groupBox1.Controls.Add(this.dtFDS);
+            this.groupBox1.Controls.Add(this.cmbDestino);
+            this.groupBox1.Controls.Add(this.txtCostoTotal);
+            this.groupBox1.Controls.Add(this.txtEstado);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(43, 51);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(374, 334);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Reservas";
             // 
             // label1
             // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.ForeColor = System.Drawing.Color.Teal;
-            label1.Location = new System.Drawing.Point(339, 106);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(51, 16);
-            label1.TabIndex = 103;
-            label1.Text = "E-mail";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Destino";
             // 
-            // txtcorreo
+            // label2
             // 
-            txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            txtcorreo.Location = new System.Drawing.Point(405, 104);
-            txtcorreo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            txtcorreo.Name = "txtcorreo";
-            txtcorreo.Size = new System.Drawing.Size(255, 23);
-            txtcorreo.TabIndex = 102;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fecha De Salida";
             // 
-            // btnagregar
+            // label4
             // 
-            btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            btnagregar.BackColor = System.Drawing.Color.Teal;
-            btnagregar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
-            btnagregar.Location = new System.Drawing.Point(303, 300);
-            btnagregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            btnagregar.Name = "btnagregar";
-            btnagregar.Size = new System.Drawing.Size(71, 32);
-            btnagregar.TabIndex = 101;
-            btnagregar.Text = "Agregar";
-            btnagregar.UseVisualStyleBackColor = false;
-            btnagregar.Click += btnagregar_Click;
-            // 
-            // label12
-            // 
-            label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label12.AutoSize = true;
-            label12.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label12.ForeColor = System.Drawing.Color.Teal;
-            label12.Location = new System.Drawing.Point(18, 276);
-            label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(145, 16);
-            label12.TabIndex = 100;
-            label12.Text = "Seleccione la fecha";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            dateTimePicker1.Location = new System.Drawing.Point(194, 271);
-            dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new System.Drawing.Size(229, 23);
-            dateTimePicker1.TabIndex = 99;
-            // 
-            // label11
-            // 
-            label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label11.ForeColor = System.Drawing.Color.Teal;
-            label11.Location = new System.Drawing.Point(15, 104);
-            label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(69, 16);
-            label11.TabIndex = 98;
-            label11.Text = "Teléfono";
-            // 
-            // txttelefono
-            // 
-            txttelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
-            txttelefono.Location = new System.Drawing.Point(103, 103);
-            txttelefono.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            txttelefono.Name = "txttelefono";
-            txttelefono.Size = new System.Drawing.Size(228, 23);
-            txttelefono.TabIndex = 97;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Fecha De Regreso";
             // 
             // label5
             // 
-            label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label5.ForeColor = System.Drawing.Color.Teal;
-            label5.Location = new System.Drawing.Point(15, 70);
-            label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(43, 16);
-            label5.TabIndex = 96;
-            label5.Text = "País:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Cantidad De Personas";
             // 
-            // txtpais
+            // label6
             // 
-            txtpais.Anchor = System.Windows.Forms.AnchorStyles.None;
-            txtpais.Location = new System.Drawing.Point(73, 69);
-            txtpais.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            txtpais.Name = "txtpais";
-            txtpais.Size = new System.Drawing.Size(587, 23);
-            txtpais.TabIndex = 95;
-            // 
-            // button1
-            // 
-            button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button1.BackColor = System.Drawing.Color.Teal;
-            button1.Location = new System.Drawing.Point(170, 423);
-            button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(239, 33);
-            button1.TabIndex = 90;
-            button1.Text = "Reservar";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // cmbDestino
-            // 
-            cmbDestino.Anchor = System.Windows.Forms.AnchorStyles.None;
-            cmbDestino.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
-            cmbDestino.FormattingEnabled = true;
-            cmbDestino.Items.AddRange(new object[] { "Colombia (Medellín-Bogotá)", "Ecuador (Quito-Quilotoa-Baños de Agua Santa) ", "Perú (Lima-Cusco) ", "Guatemala ", "El Salvador ", "Disney ", "Turquía", "Dubai" });
-            cmbDestino.Location = new System.Drawing.Point(103, 173);
-            cmbDestino.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            cmbDestino.Name = "cmbDestino";
-            cmbDestino.Size = new System.Drawing.Size(419, 23);
-            cmbDestino.TabIndex = 94;
-            cmbDestino.Text = "Seleccione su destino ";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new System.Drawing.Point(19, 338);
-            dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new System.Drawing.Size(641, 78);
-            dataGridView1.TabIndex = 91;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 170);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Estado";
             // 
             // label7
             // 
-            label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label7.ForeColor = System.Drawing.Color.Teal;
-            label7.Location = new System.Drawing.Point(14, 40);
-            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(138, 16);
-            label7.TabIndex = 93;
-            label7.Text = "Nombre completo:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 201);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Costo Total";
             // 
-            // txtnombre
+            // txtEstado
             // 
-            txtnombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            txtnombre.Location = new System.Drawing.Point(172, 39);
-            txtnombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            txtnombre.Name = "txtnombre";
-            txtnombre.Size = new System.Drawing.Size(488, 23);
-            txtnombre.TabIndex = 87;
+            this.txtEstado.Location = new System.Drawing.Point(65, 170);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(236, 20);
+            this.txtEstado.TabIndex = 10;
             // 
-            // label8
+            // txtCostoTotal
             // 
-            label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label8.ForeColor = System.Drawing.Color.Teal;
-            label8.Location = new System.Drawing.Point(347, 147);
-            label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(167, 16);
-            label8.TabIndex = 88;
-            label8.Text = "Cantidad de personas";
+            this.txtCostoTotal.Location = new System.Drawing.Point(86, 201);
+            this.txtCostoTotal.Name = "txtCostoTotal";
+            this.txtCostoTotal.Size = new System.Drawing.Size(236, 20);
+            this.txtCostoTotal.TabIndex = 11;
             // 
-            // label9
+            // cmbDestino
             // 
-            label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label9.ForeColor = System.Drawing.Color.Teal;
-            label9.Location = new System.Drawing.Point(23, 173);
-            label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(62, 16);
-            label9.TabIndex = 92;
-            label9.Text = "Destino";
+            this.cmbDestino.FormattingEnabled = true;
+            this.cmbDestino.Items.AddRange(new object[] {
+            "Colombia (Medellín-Bogotá)  ",
+            "Ecuador (Quito-Quilotoa-Baños de Agua Santa)  ",
+            "Perú (Lima-Cusco)  ",
+            "Guatemala  ",
+            "El Salvador  ",
+            "Disney  ",
+            "Turquía  ",
+            "Dubai"});
+            this.cmbDestino.Location = new System.Drawing.Point(65, 40);
+            this.cmbDestino.Name = "cmbDestino";
+            this.cmbDestino.Size = new System.Drawing.Size(287, 21);
+            this.cmbDestino.TabIndex = 12;
+            this.cmbDestino.Text = "Seleccione su destino";
+            // 
+            // dtFDS
+            // 
+            this.dtFDS.Location = new System.Drawing.Point(108, 73);
+            this.dtFDS.Name = "dtFDS";
+            this.dtFDS.Size = new System.Drawing.Size(200, 20);
+            this.dtFDS.TabIndex = 14;
+            // 
+            // dtFDR
+            // 
+            this.dtFDR.Location = new System.Drawing.Point(122, 106);
+            this.dtFDR.Name = "dtFDR";
+            this.dtFDR.Size = new System.Drawing.Size(200, 20);
+            this.dtFDR.TabIndex = 15;
+            // 
+            // cmbCDP
+            // 
+            this.cmbCDP.FormattingEnabled = true;
+            this.cmbCDP.Location = new System.Drawing.Point(135, 136);
+            this.cmbCDP.Name = "cmbCDP";
+            this.cmbCDP.Size = new System.Drawing.Size(217, 21);
+            this.cmbCDP.TabIndex = 16;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(19, 257);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 17;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // Reservas_1
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(933, 519);
-            Controls.Add(panelContenedor);
-            Name = "Reservas_1";
-            Text = "Reservas_1";
-            panelContenedor.ResumeLayout(false);
-            Reservas.ResumeLayout(false);
-            Reservas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelContenedor);
+            this.Name = "Reservas_1";
+            this.Text = "Reservas_1";
+            this.panelContenedor.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.GroupBox Reservas;
         private System.Windows.Forms.Button btnCargarPriv;
         private System.Windows.Forms.Button btnCargarGrp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbDestinoGrupo;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtcorreo;
-        private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txttelefono;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtpais;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cmbDestino;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtnombre;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtcantidadPersonas;
-        private System.Windows.Forms.ComboBox cmbtipoViaje;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbDestino;
+        private System.Windows.Forms.TextBox txtCostoTotal;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.ComboBox cmbCDP;
+        private System.Windows.Forms.DateTimePicker dtFDR;
+        private System.Windows.Forms.DateTimePicker dtFDS;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

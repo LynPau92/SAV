@@ -34,7 +34,7 @@ namespace Sistema_Agencia_de_Viajes
             this.TipoViaje = tipoViaje;
             this.Destino = destino;
 
-            cn = new SqlConnection("Data Source=DESKTOP-URDRB0N\\SQLEXPRESS;Initial Catalog=IVIAJE;Integrated Security=True;Encrypt=False");
+            cn = new SqlConnection("Data Source=DESKTOP-AESK9OQ\\SQLEXPRESS;Initial Catalog=IVIAJE;Integrated Security=True;Encrypt=False");
         }
         public Cliente() 
         { 
@@ -84,7 +84,7 @@ namespace Sistema_Agencia_de_Viajes
 
         public void CargarClientes(DataGridView dtg)
         {
-            string connectionString = "Data Source=DESKTOP-URDRB0N\\SQLEXPRESS;Initial Catalog=IVIAJE;Integrated Security=True;Encrypt=False";
+            string connectionString = "Data Source=DESKTOP-AESK9OQ\\SQLEXPRESS;Initial Catalog=IVIAJE;Integrated Security=True;Encrypt=False";
 
             using (SqlConnection cn = new SqlConnection(connectionString)) 
             {
@@ -107,7 +107,7 @@ namespace Sistema_Agencia_de_Viajes
         public int EliminarCliente()
         {
             int filasAfectadas = 0;
-            string connectionString = "Data Source=DESKTOP-URDRB0N\\SQLEXPRESS;Initial Catalog=IVIAJE;Integrated Security=True;Encrypt=False";
+            string connectionString = "Data Source=DESKTOP-AESK9OQ\\SQLEXPRESS;Initial Catalog=IVIAJE;Integrated Security=True;Encrypt=False";
 
             if (ID_Cliente <= 0)
             {
@@ -179,10 +179,12 @@ namespace Sistema_Agencia_de_Viajes
 
                     filasAfectadas = consulta.ExecuteNonQuery();
                 }
-            }catch (Exception ex)
-            {
-                Console.WriteLine("Error al agregar cliente: " + ex.Message);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar cliente: " + ex.Message);
+            }
+
             finally
             {
                 cn.Close();

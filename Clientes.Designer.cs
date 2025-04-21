@@ -40,8 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,8 +68,6 @@
             this.Cliente.Controls.Add(this.label1);
             this.Cliente.Controls.Add(this.txtcorreo);
             this.Cliente.Controls.Add(this.btnAgregar);
-            this.Cliente.Controls.Add(this.label12);
-            this.Cliente.Controls.Add(this.dateTimePicker1);
             this.Cliente.Controls.Add(this.label11);
             this.Cliente.Controls.Add(this.txttelefono);
             this.Cliente.Controls.Add(this.label5);
@@ -219,26 +215,6 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Teal;
-            this.label12.Location = new System.Drawing.Point(183, 293);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(145, 16);
-            this.label12.TabIndex = 100;
-            this.label12.Text = "Seleccione la fecha";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(334, 289);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
-            this.dateTimePicker1.TabIndex = 99;
-            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -382,8 +358,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label5;

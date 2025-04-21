@@ -19,16 +19,15 @@ namespace PROYECTO_FINAL
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            string nombre = txtnombre.Text;
-            string pais = txtpais.Text;
-            string telefono = txttelefono.Text;
-            string correo = txtcorreo.Text;
-            string cantidadPersonas = txtcantidadPersonas.Text;
-            string tipoViaje = cmbtipoViaje.Text;
             string destino = cmbDestino.Text;
+            string fechaSalida = dtFDS.Text;
+            string fechaRegreso = dtFDR.Text;
+            string cantidadPersonas = cmbCDP.Text;
+            string estado = txtEstado.Text;
+            string costoTotal = txtCostoTotal.Text;
 
-            if (nombre == "" || pais == "" || telefono == "" || correo == "" || cantidadPersonas == ""
-                || tipoViaje == "Seleccione el tipo de viaje" || destino == "Seleccione su destino")
+            if (destino == "" || fechaSalida == "" || fechaRegreso == ""
+                || cantidadPersonas  == "Selecciona la cantidad de personas" || destino == "Seleccione su destino")
             {
                 MessageBox.Show("Debe completar todos los campos");
             }
@@ -36,6 +35,11 @@ namespace PROYECTO_FINAL
             {
                 MessageBox.Show("Vamos bien");
             }
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
