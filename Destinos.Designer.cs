@@ -220,7 +220,7 @@
             this.groupBox1.Size = new System.Drawing.Size(726, 316);
             this.groupBox1.TabIndex = 123;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Reservas";
+            this.groupBox1.Text = "Destinos";
             // 
             // Destinos
             // 

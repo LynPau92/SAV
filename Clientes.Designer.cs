@@ -84,7 +84,7 @@
             this.Cliente.Size = new System.Drawing.Size(726, 326);
             this.Cliente.TabIndex = 1;
             this.Cliente.TabStop = false;
-            this.Cliente.Text = "Reservas";
+            this.Cliente.Text = "Clientes";
             // 
             // ID
             // 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Sistema_Agencia_de_Viajes
 {
@@ -339,7 +340,29 @@ namespace Sistema_Agencia_de_Viajes
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            int id = Convert.ToInt32(txtIDRESERVA.Text);
+
+            DialogResult confirmar = MessageBox.Show("¿Desea eliminar?", "Mensaje", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (confirmar == DialogResult.OK)
+            {
+                Reservas1 reservas = new Reservas1(id);
+                int fila = reservas.EliminarReserva();
+
+                if (fila == 1)
+                {
+                    ResetearFormulario();
+                    ListarReservas();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar la reserva");
+                }
+            }
+            else
+            {
+                ResetearFormulario();
+            }
         }
 
         #endregion
