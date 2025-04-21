@@ -79,97 +79,23 @@ namespace Sistema_Agencia_de_Viajes
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-
-            //string usuario = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su usuario:", "Acceso a Clientes", "");
-
-            //if (usuario == "Lyn")
-            //{
-            //    string password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su contraseña:", "Acceso a Clientes", "");
-
-            //    if (password == "1234")
-            //    {
             AbrirFormEnPanel(new Clientes());
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
         }
 
         private void btnReservas_Click(object sender, EventArgs e)
         {
-            //string usuario = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su usuario:", "Acceso a Reservas", "");
-
-            //if (usuario == "Lyn")
-            //{
-            //    string password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su contraseña:", "Acceso a Reservas", "");
-
-            //    if (password == "1234")
-            //{
+ 
             AbrirFormEnPanel(new Reservas());
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+
         }
 
         private void btnDestinos_Click(object sender, EventArgs e)
         {
-            //string usuario = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su usuario:", "Acceso a Destinos", "");
-
-            //if (usuario == "Lyn")
-            //{
-            //    string password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su contraseña:", "Acceso a Destinos", "");
-
-            //    if (password == "1234")
-            //    {
+            
             AbrirFormEnPanel(new Destinos());
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+           
         }
 
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            //string usuario = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su usuario:", "Acceso a Empleados", "");
-
-            //if (usuario == "Lyn")
-            //{
-            //    string password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese su contraseña:", "Acceso a Empleados", "");
-
-            //    if (password == "1234")
-            //    {
-            AbrirFormEnPanel(new Empleados());
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            }
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //    }
-        }
+       
     }
 }

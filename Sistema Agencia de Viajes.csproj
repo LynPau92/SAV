@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaseDestino.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
@@ -59,12 +60,6 @@
     </Compile>
     <Compile Include="Destinos.Designer.cs">
       <DependentUpon>Destinos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Empleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Empleados.Designer.cs">
-      <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -99,6 +94,9 @@
     <Compile Include="Reservas1.cs" />
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destinos.resx">
+      <DependentUpon>Destinos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

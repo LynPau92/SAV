@@ -158,7 +158,6 @@ namespace Sistema_Agencia_de_Viajes
             {
                 DataGridViewRow row = dtgReservas.Rows[e.RowIndex];
 
-                // Validación para ID_Reservas
                 if (row.Cells["ID_Reservas"].Value != null && int.TryParse(row.Cells["ID_Reservas"].Value.ToString(), out int idReserva))
                 {
                     txtIDRESERVA.Text = idReserva.ToString();
@@ -169,7 +168,6 @@ namespace Sistema_Agencia_de_Viajes
                     return;
                 }
 
-                // El resto del llenado
                 txtIDCLIENTE.Text = row.Cells["ID_Cliente"].Value?.ToString();
                 cmbDestino.Text = row.Cells["Destino"].Value?.ToString();
                 dtFDS.Value = Convert.ToDateTime(row.Cells["Fecha_Salida"].Value);

@@ -47,8 +47,6 @@
             this.PaqNacGrupo = new System.Windows.Forms.Button();
             this.iViajeLogo = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.btnEmpleados = new System.Windows.Forms.Button();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.btnDestinos = new System.Windows.Forms.Button();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -72,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iViajeLogo)).BeginInit();
             this.MenuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
@@ -217,8 +214,6 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.Black;
-            this.MenuVertical.Controls.Add(this.pictureBox13);
-            this.MenuVertical.Controls.Add(this.btnEmpleados);
             this.MenuVertical.Controls.Add(this.pictureBox14);
             this.MenuVertical.Controls.Add(this.btnDestinos);
             this.MenuVertical.Controls.Add(this.pictureBox15);
@@ -231,30 +226,6 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(252, 611);
             this.MenuVertical.TabIndex = 35;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(7, 302);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(65, 49);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 8;
-            this.pictureBox13.TabStop = false;
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleados.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEmpleados.ForeColor = System.Drawing.Color.Teal;
-            this.btnEmpleados.Location = new System.Drawing.Point(83, 302);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(161, 49);
-            this.btnEmpleados.TabIndex = 7;
-            this.btnEmpleados.Text = "Empleados";
-            this.btnEmpleados.UseVisualStyleBackColor = true;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // pictureBox14
             // 
@@ -456,7 +427,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iViajeLogo)).EndInit();
             this.MenuVertical.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
@@ -490,8 +460,6 @@
         private System.Windows.Forms.Button PaqNacGrupo;
         private System.Windows.Forms.PictureBox iViajeLogo;
         private System.Windows.Forms.Panel MenuVertical;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.Button btnDestinos;
         private System.Windows.Forms.Button btnReservas;
