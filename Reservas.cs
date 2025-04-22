@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,37 +46,85 @@ namespace Sistema_Agencia_de_Viajes
 
         }
 
+
+        private int ObtenerPrecioPorID(int ID_Destinos)
+        {
+            int precio = 0;
+            string connectionString = "Data Source=DESKTOP-AESK9OQ\\SQLEXPRESS;Initial Catalog=IVIAJE;Integrated Security=True;Encrypt=False";
+
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    cn.Open();
+                    string query = "SELECT Precio FROM Destinos WHERE ID_Destinos = @ID_Destinos";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@ID_Destinos", ID_Destinos);
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                        precio = Convert.ToInt32(result);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el precio del destino: " + ex.Message);
+                }
+            }
+
+            return precio;
+        }
+
+        private void CalcularCostoTotal()
+        {
+            if (int.TryParse(txtCDP.Text, out int cantidadPersonas) && int.TryParse(txtIDDestino.Text, out int idDestino))
+            {
+                int precioDestino = ObtenerPrecioPorID(idDestino);
+                if (precioDestino > 0)
+                {
+                    double total = cantidadPersonas * precioDestino;
+                    txtCostoTotal.Text = total.ToString();
+                }
+                else
+                {
+                    txtCostoTotal.Text = "0";
+                }
+            }
+            else
+            {
+                txtCostoTotal.Text = "0";
+            }
+        }
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             int ID_Cliente = Convert.ToInt32(txtIDCLIENTE.Text);
-            string Destino = cmbDestino.Text;
             DateTime Fecha_Salida = dtFDS.Value;
             DateTime Fecha_Regreso = dtFDR.Value;
             int Num_Personas = Convert.ToInt32(txtCDP.Text);
             string Estado = cmbEstado.Text;
-            double Costo_Total = Convert.ToInt32(txtCostoTotal.Text);
+            int ID_Destino = Convert.ToInt32(txtIDDestino.Text);
 
-            if (ID_Cliente == 0 || Destino == "Seleccione su destino" || Fecha_Salida == DateTime.Now || Fecha_Regreso == DateTime.Now || Num_Personas == 0
-                || Estado == "" || Costo_Total == 0)
+            int precioDestino = ObtenerPrecioPorID(ID_Destino);
+            if (precioDestino == 0)
             {
-                MessageBox.Show("Debe completar todos los campos");
+                MessageBox.Show("No se encontró el precio para el destino ingresado.");
+                return;
+            }
+
+            double costoTotal = precioDestino * Num_Personas;
+            txtCostoTotal.Text = costoTotal.ToString();
+
+            Reservas1 reserva = new Reservas1(0, ID_Cliente, Fecha_Salida, Fecha_Regreso, Num_Personas, Estado, costoTotal, ID_Destino);
+            int resultado = reserva.AgregarReserva();
+
+            if (resultado == 1)
+            {
+                MessageBox.Show("Reserva agregada correctamente");
+                ResetearFormulario();
+                ListarReservas();
             }
             else
             {
-                Reservas1 nuevaReserva = new Reservas1(0, ID_Cliente, Destino, Fecha_Salida, Fecha_Regreso, Num_Personas, Estado, Costo_Total);
-                int fila = nuevaReserva.AgregarReserva();
-
-                if (fila == 1)
-                {
-                    MessageBox.Show("La reserva se agregó correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ResetearFormulario();
-                    ListarReservas();
-                }
-                else
-                {
-                    MessageBox.Show("Ocurrió un error al agregar al agregar la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
+                MessageBox.Show("Error al agregar la reserva");
             }
 
         }
@@ -88,7 +137,7 @@ namespace Sistema_Agencia_de_Viajes
         public void ResetearFormulario()
         {
             txtIDCLIENTE.Clear();
-            cmbDestino.Text = "Seleccione su destino";
+            txtIDDestino.Clear();
             dtFDS.Value = DateTime.Now;
             dtFDR.Value = DateTime.Now;
             txtCDP.Clear();
@@ -118,19 +167,19 @@ namespace Sistema_Agencia_de_Viajes
 
             int ID_Cliente = Convert.ToInt32(txtIDCLIENTE.Text);
             int ID_Reservas = Convert.ToInt32(txtIDRESERVA.Text);
-            string Destino = cmbDestino.Text;
             DateTime FechaSalida = dtFDS.Value;
             DateTime FechaRegreso = dtFDR.Value;
             int NumPersonas = Convert.ToInt32(txtCDP.Text);
             string Estado = cmbEstado.Text;
             double costoTotal = Convert.ToDouble(txtCostoTotal.Text);
+            int ID_Destino = Convert.ToInt32(txtIDDestino.Text);
 
             DialogResult confirmar = MessageBox.Show("¿Desea realizar los cambios?",
                 "Mensaje", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (confirmar == DialogResult.OK)
             {
-                Reservas1 reservas = new Reservas1(ID_Reservas, ID_Cliente, Destino, FechaSalida, FechaRegreso, NumPersonas, Estado, costoTotal);
+                Reservas1 reservas = new Reservas1(ID_Reservas, ID_Cliente, FechaSalida, FechaRegreso, NumPersonas, Estado, costoTotal, ID_Destino);
                 int fila = reservas.EditarReserva();
 
                 if (fila == 1)
@@ -169,12 +218,12 @@ namespace Sistema_Agencia_de_Viajes
                 }
 
                 txtIDCLIENTE.Text = row.Cells["ID_Cliente"].Value?.ToString();
-                cmbDestino.Text = row.Cells["Destino"].Value?.ToString();
                 dtFDS.Value = Convert.ToDateTime(row.Cells["Fecha_Salida"].Value);
                 dtFDR.Value = Convert.ToDateTime(row.Cells["Fecha_Regreso"].Value);
                 txtCDP.Text = row.Cells["Num_Personas"].Value?.ToString();
                 cmbEstado.Text = row.Cells["Estado"].Value?.ToString();
                 txtCostoTotal.Text = row.Cells["Costo_Total"].Value?.ToString();
+                txtIDDestino.Text = row.Cells["ID_Destino"].Value?.ToString();
 
                 btnAgregar.Enabled = false;
                 btnModificar.Enabled = true;

@@ -32,6 +32,8 @@ namespace Sistema_Agencia_de_Viajes
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIDDestino = new System.Windows.Forms.TextBox();
+            this.txtIDRESERVA = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtIDCLIENTE = new System.Windows.Forms.TextBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
@@ -43,7 +45,6 @@ namespace Sistema_Agencia_de_Viajes
             this.ID_Reservas = new System.Windows.Forms.Label();
             this.dtFDR = new System.Windows.Forms.DateTimePicker();
             this.dtFDS = new System.Windows.Forms.DateTimePicker();
-            this.cmbDestino = new System.Windows.Forms.ComboBox();
             this.txtCostoTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace Sistema_Agencia_de_Viajes
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgReservas = new System.Windows.Forms.DataGridView();
-            this.txtIDRESERVA = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,7 @@ namespace Sistema_Agencia_de_Viajes
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtIDDestino);
             this.groupBox1.Controls.Add(this.txtIDRESERVA);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtIDCLIENTE);
@@ -72,7 +73,6 @@ namespace Sistema_Agencia_de_Viajes
             this.groupBox1.Controls.Add(this.ID_Reservas);
             this.groupBox1.Controls.Add(this.dtFDR);
             this.groupBox1.Controls.Add(this.dtFDS);
-            this.groupBox1.Controls.Add(this.cmbDestino);
             this.groupBox1.Controls.Add(this.txtCostoTotal);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -88,13 +88,30 @@ namespace Sistema_Agencia_de_Viajes
             this.groupBox1.Text = "Reservas";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
+            // txtIDDestino
+            // 
+            this.txtIDDestino.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIDDestino.Location = new System.Drawing.Point(377, 46);
+            this.txtIDDestino.Name = "txtIDDestino";
+            this.txtIDDestino.Size = new System.Drawing.Size(43, 20);
+            this.txtIDDestino.TabIndex = 127;
+            // 
+            // txtIDRESERVA
+            // 
+            this.txtIDRESERVA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIDRESERVA.Location = new System.Drawing.Point(238, 31);
+            this.txtIDRESERVA.Name = "txtIDRESERVA";
+            this.txtIDRESERVA.ReadOnly = true;
+            this.txtIDRESERVA.Size = new System.Drawing.Size(43, 20);
+            this.txtIDRESERVA.TabIndex = 126;
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(123, 61);
+            this.label3.Location = new System.Drawing.Point(142, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 125;
@@ -103,7 +120,7 @@ namespace Sistema_Agencia_de_Viajes
             // txtIDCLIENTE
             // 
             this.txtIDCLIENTE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIDCLIENTE.Location = new System.Drawing.Point(219, 57);
+            this.txtIDCLIENTE.Location = new System.Drawing.Point(238, 56);
             this.txtIDCLIENTE.Name = "txtIDCLIENTE";
             this.txtIDCLIENTE.Size = new System.Drawing.Size(43, 20);
             this.txtIDCLIENTE.TabIndex = 124;
@@ -186,7 +203,7 @@ namespace Sistema_Agencia_de_Viajes
             this.ID_Reservas.AutoSize = true;
             this.ID_Reservas.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_Reservas.ForeColor = System.Drawing.Color.Teal;
-            this.ID_Reservas.Location = new System.Drawing.Point(123, 32);
+            this.ID_Reservas.Location = new System.Drawing.Point(142, 31);
             this.ID_Reservas.Name = "ID_Reservas";
             this.ID_Reservas.Size = new System.Drawing.Size(86, 16);
             this.ID_Reservas.TabIndex = 117;
@@ -207,28 +224,11 @@ namespace Sistema_Agencia_de_Viajes
             this.dtFDS.Size = new System.Drawing.Size(200, 20);
             this.dtFDS.TabIndex = 14;
             // 
-            // cmbDestino
-            // 
-            this.cmbDestino.FormattingEnabled = true;
-            this.cmbDestino.Items.AddRange(new object[] {
-            "Colombia (Medellín-Bogotá)  ",
-            "Ecuador (Quito-Quilotoa-Baños de Agua Santa)  ",
-            "Perú (Lima-Cusco)  ",
-            "Guatemala  ",
-            "El Salvador  ",
-            "Disney  ",
-            "Turquía  ",
-            "Dubai"});
-            this.cmbDestino.Location = new System.Drawing.Point(352, 53);
-            this.cmbDestino.Name = "cmbDestino";
-            this.cmbDestino.Size = new System.Drawing.Size(287, 21);
-            this.cmbDestino.TabIndex = 12;
-            this.cmbDestino.Text = "Seleccione su destino";
-            // 
             // txtCostoTotal
             // 
             this.txtCostoTotal.Location = new System.Drawing.Point(301, 209);
             this.txtCostoTotal.Name = "txtCostoTotal";
+            this.txtCostoTotal.ReadOnly = true;
             this.txtCostoTotal.Size = new System.Drawing.Size(119, 20);
             this.txtCostoTotal.TabIndex = 11;
             // 
@@ -292,11 +292,11 @@ namespace Sistema_Agencia_de_Viajes
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(284, 58);
+            this.label1.Location = new System.Drawing.Point(287, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(83, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Destino";
+            this.label1.Text = "ID Destino";
             // 
             // dtgReservas
             // 
@@ -309,15 +309,6 @@ namespace Sistema_Agencia_de_Viajes
             this.dtgReservas.Size = new System.Drawing.Size(726, 147);
             this.dtgReservas.TabIndex = 122;
             this.dtgReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgReservas_CellClick);
-            // 
-            // txtIDRESERVA
-            // 
-            this.txtIDRESERVA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIDRESERVA.Location = new System.Drawing.Point(219, 32);
-            this.txtIDRESERVA.Name = "txtIDRESERVA";
-            this.txtIDRESERVA.ReadOnly = true;
-            this.txtIDRESERVA.Size = new System.Drawing.Size(43, 20);
-            this.txtIDRESERVA.TabIndex = 126;
             // 
             // Reservas
             // 
@@ -370,7 +361,6 @@ namespace Sistema_Agencia_de_Viajes
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtFDR;
         private System.Windows.Forms.DateTimePicker dtFDS;
-        private System.Windows.Forms.ComboBox cmbDestino;
         private System.Windows.Forms.TextBox txtCostoTotal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -389,5 +379,6 @@ namespace Sistema_Agencia_de_Viajes
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIDCLIENTE;
         private System.Windows.Forms.TextBox txtIDRESERVA;
+        private TextBox txtIDDestino;
     }
 }
